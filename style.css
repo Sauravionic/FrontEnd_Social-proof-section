@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+*,*::before,*::after {
+    box-sizing: inherit;
+}
+
+:root {
+    --vryDarkMagenta: hsl(300, 43%, 22%);
+    --softPink: hsl(333, 80%, 67%);
+    --darkGrayMagenta: hsl(303, 10%, 53%);
+    --lightGrayMagenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'Spartan',sans-serif;
+    font-size: 15px;
+    background: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+    background-position: top left, bottom right;
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 40px 12px 50px 12px;
+}
+
+
+.page .first_half .products {
+    margin-bottom: 25px;
+}
+.page .first_half .products h2 {
+    color: var(--vryDarkMagenta);
+}
+.page .first_half .products p {
+    color: var(--darkGrayMagenta);
+    font-size: 13px;
+}
+
+
+.page .first_half .rating {
+    margin-bottom: 25px;
+}
+.page .first_half .rating .stars {
+    display: inline;
+}
+.page .first_half .rating h5 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    color: var(--vryDarkMagenta);
+}
+.page .first_half .rating > div {
+    background-color: var(--lightGrayMagenta);
+    border-radius: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.page .first_half .rating > div:not(:last-child){
+    margin-bottom: 12px;
+}
+
+
+.page .second_half .reviews > div {
+    background-color: var(--vryDarkMagenta);
+    padding: 20px 20px 20px 20px;
+    border-radius: 15px;
+}
+.page .second_half .reviews > div:not(:last-child) {
+    margin-bottom: 15px;
+}
+.page .second_half .reviews .info {
+    display: flex;
+    align-items: center;
+}
+.page .second_half .reviews .info .info__photo .pic{
+    display: inline;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+}
+.page .second_half .reviews .info .info__photo {
+    margin-right: 20px;
+}
+.page .second_half .reviews .info .name h5 {
+    font-weight: 500;
+    color: var(--white);
+    margin: 0;
+    margin-bottom: 5px;
+}
+.page .second_half .reviews .info .name p {
+    color: var(--softPink);
+    margin: 0;
+    font-size: 12px;
+}
+.page .second_half .reviews .review_given {
+    margin-top: 15px;
+    margin-bottom: 0px;
+    color: var(--lightGrayMagenta);
+    font-size: 12px;
+    opacity: 0.8;
+    line-height: 1.7;
+    text-align: left;
+}
+
+@media only screen and (min-width: 900px) {
+
+    html {
+        height: 100%;
+    }
+    body {
+        background: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+        background-position: top left, bottom right;
+        background-repeat: no-repeat;
+        background-size: 47%, 69%;
+    }
+    .page {
+        align-items: center;
+        margin-top: 150px;
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+    .first_half {
+      display: flex;  
+      flex-direction: row;
+      margin-left: 20px;
+    }
+    .products {
+        flex: 1.5;
+        padding-right: 30px;
+    }
+    .products h2 {
+        margin-right: 145px;
+        font-size: 30px;
+        text-align: left;
+    }
+    .products p {
+        text-align: left;
+        margin-right: 30px;
+    }
+    .rating {
+        flex: 2;
+    }
+    .rating > div {
+        flex: 1;
+        width: 400px;
+    }
+    .rating_card_2 {
+        margin-left: 60px;
+    }
+    .rating_card_3 {
+        margin-left: 120px;
+    }
+
+    .second_half {
+        margin-top: 80px;
+    }
+    .second_half .reviews{
+        display: flex;
+        flex-direction: row;
+    }
+    .reviews > div {
+        height: 170px;
+        width: 310px;
+        margin-right: 20px;
+    }
+}
